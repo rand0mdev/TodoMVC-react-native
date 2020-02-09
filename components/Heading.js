@@ -1,25 +1,22 @@
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, StyleSheet } from 'react-native';
+import Color from './Color';
+import Shadow from './Shadow';
 
 const Heading = ({title}) => {
     return (
-        <View style={styles.container}>
-            <Text style={styles.text}>{title}</Text>
-        </View>
+        <Text style={styles.text}>{title}</Text>
     );
 };
 
 const styles = StyleSheet.create({
-    container: {
-        marginTop: 100
-    },
-
     text: {
-        fontSize: 60,
+        fontSize: 70,
         textAlign: 'center',
-        color: 'rgba(200, 0, 0, .4)',
+        color: Color.red,
         textTransform: 'lowercase',
-        fontWeight: '200'
+        fontWeight: '200',
+        ...Shadow.md
     }
 });
 
